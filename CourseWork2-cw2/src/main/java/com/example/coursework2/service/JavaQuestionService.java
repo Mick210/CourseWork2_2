@@ -3,7 +3,6 @@ package com.example.coursework2.service;
 import com.example.coursework2.questionclass.Question;
 import com.example.coursework2.repository.QuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -11,13 +10,12 @@ import java.util.*;
 
 @Service
 @Component
-@Qualifier("javaQuestions")
 public class JavaQuestionService implements QuestionService {
     private QuestionRepository questionRepository;
     private Random random;
 
     @Autowired
-    public JavaQuestionService(@Qualifier("javaQuestionRepository") QuestionRepository questionRepository) {
+    public JavaQuestionService(QuestionRepository questionRepository) {
         this.questionRepository = questionRepository;
         this.random = new Random();
     }

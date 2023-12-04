@@ -11,10 +11,6 @@ public class Question {
     private String question;
     private String answer;
 
-    public Question(String question) {
-        this.question = question;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

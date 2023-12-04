@@ -2,7 +2,6 @@ package com.example.coursework2.controller;
 
 import com.example.coursework2.questionclass.Question;
 import com.example.coursework2.service.ExaminerService;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +18,7 @@ public class ExamController {
     private ExaminerService service;
 
     @Autowired
-    public ExamController (ExaminerService service) {
+    public ExamController(ExaminerService service) {
         this.service = service;
     }
 
